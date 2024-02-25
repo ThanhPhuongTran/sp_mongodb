@@ -34,6 +34,10 @@ public class DanhMucService {
 		}catch(Exception e) {}
 		return dmList;
 	}
+	public DanhMuc getDanhMucId(String id)
+	{
+		return danhmucRepository.findById(id).get();
+	}
 	public String deleteDanhMuc(String id)
 	{
 		try {

@@ -1,5 +1,6 @@
 package com.example.sp_mongodb.Model;
 
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -10,6 +11,7 @@ import lombok.Data;
 @Data
 @Builder
 public class DanhMuc {
+	
 	@Id
 	private String id;
 	@Field(name="tendanhmuc")
