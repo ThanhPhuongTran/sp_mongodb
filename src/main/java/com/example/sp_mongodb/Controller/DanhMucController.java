@@ -40,6 +40,24 @@ public class DanhMucController {
 	public List<DanhMuc> getDanhMuc(){
 		return danhmucService.getDanhMuc();
 	}
+	@GetMapping("/get/checkiddanhmuc")
+	@ResponseStatus(HttpStatus.OK)
+	public int checkIdDanhMuc(@RequestParam String id){
+		List<DanhMuc> danhMucList = danhmucService.getDanhMuc();
+		int i=0;
+		for (DanhMuc danhMuc : danhMucList) {
+            if (danhMuc.getId().equals(id)) {
+                i=i+1;
+            }
+        }
+		if (i>0) 
+		{
+			return 1;
+		}
+		else{
+			return 0;
+		}
+	}
 	@GetMapping("/get/danhmucid")
 	@ResponseStatus(HttpStatus.OK)
 	public List<SanPham> getDanhMucId(@RequestParam String id){	
