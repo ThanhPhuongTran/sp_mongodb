@@ -16,5 +16,12 @@ public class DanhMuc {
 	private String id;
 	@Field(name="tendanhmuc")
 	private String TenDanhMuc;
+	public DanhMuc()
+	{}
+	public DanhMuc(String id, String tenDanhMuc, String moTa) {
+		this.id = id;
+		TenDanhMuc = tenDanhMuc;
+		MoTa = moTa;
+	}
 	private String MoTa;
 }
