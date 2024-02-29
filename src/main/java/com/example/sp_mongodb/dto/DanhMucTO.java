@@ -9,4 +9,5 @@ public class DanhMucTO {
 	private String id;
 	private String TenDanhMuc;
 	private String MoTa;
+	// public DanhMucTO(){}
 }
