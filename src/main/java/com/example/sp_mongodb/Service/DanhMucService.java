@@ -15,7 +15,14 @@ public class DanhMucService {
 	private DanhMucRepository danhmucRepository;
 	public String createDanhMuc(DanhMucTO danhmucTo)
 	{
-		
+		if (danhmucTo.getId() == null || danhmucTo.getId().isEmpty()) {
+			return "Mã danh mục không được trống.";
+		}
+	
+		// Kiểm tra tên danh mục không quá 10 ký tự
+		if (danhmucTo.getTenDanhMuc().length() > 10) {
+			return "Tên danh mục không được quá 10 ký tự.";
+		}
 			DanhMuc dm= DanhMuc.builder()
 					.TenDanhMuc(danhmucTo.getTenDanhMuc())
 					.MoTa(danhmucTo.getMoTa())
