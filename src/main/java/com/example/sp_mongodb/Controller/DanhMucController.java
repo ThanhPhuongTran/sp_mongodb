@@ -61,7 +61,7 @@ public class DanhMucController {
 	@GetMapping("/get/danhmucid")
 	@ResponseStatus(HttpStatus.OK)
 	public List<SanPham> getDanhMucId(@RequestParam String id){	
-		String url = "http://localhost:8081/sanpham/theodm";
+		String url = "http://sanpham/sanpham/theodm";
         
         // Xây dựng URL với tham số từ @RequestParam
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(url)
